@@ -1,5 +1,6 @@
 #Latest version of node tested on.
-FROM node:4.1.2-slim
+#FROM node:4.1.2-slim
+FROM node:4.7-alpine
 
 WORKDIR /app
 
@@ -19,6 +20,6 @@ RUN npm run dist
 # Number of milliseconds between polling requests. Default is 1000.
 ENV MS 1000
 
-EXPOSE 8080
+EXPOSE 8083
 
 CMD ["npm","start"]
